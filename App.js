@@ -1,14 +1,23 @@
 import React from 'react';
 import './App.css';
-import { Mail, Phone, User, Briefcase, Code, GraduationCap, ExternalLink } from 'lucide-react';
+import { Mail, Phone, User, Briefcase, Code, GraduationCap, ExternalLink, Home, Info, List, Book } from 'lucide-react';
 
 function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* Header Section */}
-      <header className="relative h-64 bg-gradient-to-r from-blue-600 to-indigo-700">
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80')] bg-cover bg-center mix-blend-overlay"></div>
+      <header className="relative h-64 bg-gradient-to-r from-blue-600 to-indigo-700 flex items-center justify-between px-8 py-4">
+        <div className="text-white text-3xl font-bold">
+          My Profile
+        </div>
+        <nav className="flex space-x-4">
+          <a href="#about" className="text-white text-lg hover:text-gray-300">About</a>
+          <a href="#experience" className="text-white text-lg hover:text-gray-300">Experience</a>
+          <a href="#projects" className="text-white text-lg hover:text-gray-300">Projects</a>
+          <a href="#education" className="text-white text-lg hover:text-gray-300">Education</a>
+          <a href="#skills" className="text-white text-lg hover:text-gray-300">Skills</a>
+          <a href="#contact" className="text-white text-lg hover:text-gray-300">Contact</a>
+        </nav>
       </header>
 
       {/* Profile Content */}
@@ -43,7 +52,7 @@ function App() {
             {/* Left Column */}
             <div className="lg:col-span-2 space-y-8">
               {/* About Section */}
-              <section>
+              <section id="about">
                 <div className="flex items-center gap-2 mb-4">
                   <User className="w-5 h-5 text-blue-600" />
                   <h2 className="text-xl font-semibold text-gray-900">About Me</h2>
@@ -62,7 +71,7 @@ function App() {
               </section>
 
               {/* Experience Section */}
-              <section>
+              <section id="experience">
                 <div className="flex items-center gap-2 mb-4">
                   <Briefcase className="w-5 h-5 text-blue-600" />
                   <h2 className="text-xl font-semibold text-gray-900">Experience</h2>
@@ -78,7 +87,7 @@ function App() {
               </section>
 
               {/* Projects Section */}
-              <section>
+              <section id="projects">
                 <div className="flex items-center gap-2 mb-4">
                   <Code className="w-5 h-5 text-blue-600" />
                   <h2 className="text-xl font-semibold text-gray-900">Notable Projects</h2>
@@ -100,7 +109,7 @@ function App() {
             {/* Right Column */}
             <div className="space-y-8">
               {/* Education Section */}
-              <section>
+              <section id="education">
                 <div className="flex items-center gap-2 mb-4">
                   <GraduationCap className="w-5 h-5 text-blue-600" />
                   <h2 className="text-xl font-semibold text-gray-900">Education</h2>
@@ -118,7 +127,7 @@ function App() {
               </section>
 
               {/* Skills Section */}
-              <section>
+              <section id="skills">
                 <div className="flex items-center gap-2 mb-4">
                   <Code className="w-5 h-5 text-blue-600" />
                   <h2 className="text-xl font-semibold text-gray-900">Skills</h2>
@@ -136,7 +145,7 @@ function App() {
               </section>
 
               {/* Social Links */}
-              <section>
+              <section id="contact">
                 <div className="flex flex-col space-y-3">
                   <a
                     href="#"
